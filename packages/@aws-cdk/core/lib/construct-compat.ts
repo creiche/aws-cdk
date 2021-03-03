@@ -10,6 +10,7 @@
  * This file, in its entirety, is expected to be removed in v2.0.
  */
 
+import * as cxschema from '@aws-cdk/cloud-assembly-schema';
 import * as cxapi from '@aws-cdk/cx-api';
 import * as constructs from 'constructs';
 import { Annotations } from './annotations';
@@ -416,7 +417,7 @@ export class ConstructNode {
    * An immutable array of metadata objects associated with this construct.
    * This can be used, for example, to implement support for deprecation notices, source mapping, etc.
    */
-  public get metadata() { return this._actualNode.metadata as cxapi.MetadataEntry[]; }
+  public get metadata() { return this._actualNode.metadata as cxschema.MetadataEntry[]; }
 
   /**
    * Adds a metadata entry to this construct.
