@@ -56,3 +56,7 @@ incompatible-argument:@aws-cdk/aws-ecs.TaskDefinition.addVolume
 # We made properties optional and it's really fine but our differ doesn't think so.
 weakened:@aws-cdk/cloud-assembly-schema.DockerImageSource
 weakened:@aws-cdk/cloud-assembly-schema.FileSource
+
+# We changed some APIs to use non-deprecated counterparts
+changed-type:@aws-cdk/core.ConstructNode.metadata
+incompatible-argument:@aws-cdk/core.Stack.reportMissingContext
